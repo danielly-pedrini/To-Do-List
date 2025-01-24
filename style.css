@@ -7,27 +7,36 @@
 
 body {
     background: url("./assets/img-body.jpg");
-        background-size: 100% 100%; 
-        background-position: center; 
-        height: 100vh; 
-        margin: 0; 
-    }
-    
-
-    
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
 
 .principal {
     background-color: #dddcdca1;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     border-radius: 10px;
     padding: 20px;
-    margin: 100px auto 0;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .input-task {
     border: none;
     border-radius: 5px;
-    width: 300px;
+    flex-grow: 1;
+    min-width: 200px;
     height: 40px;
     padding-left: 10px;
     background-color: #ffffff;
@@ -40,9 +49,9 @@ button {
     background-color: #0bee3c;
     color: #ffffff;
     font-size: 17px;
-    float: right;
     padding: 0 15px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
@@ -73,9 +82,15 @@ button:active {
     cursor: pointer;
 }
 
+.task p {
+    flex-grow: 1;
+    margin: 0 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-
-img {
+.task img {
     height: 25px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -85,25 +100,73 @@ img {
     opacity: 1;
 }
 
-.done{
-text-decoration: line-through;
-background-color:rgba(30, 30, 235, 0.555);
-opacity: 0.8;
+.done {
+    text-decoration: line-through;
+    background-color: rgba(30, 30, 235, 0.555);
+    opacity: 0.8;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 480px) {
     .principal {
-        width: 95%;
+        margin: 10px;
         padding: 15px;
     }
 
-    .input-task, button {
-        font-size: 16px;
+    .input-task {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
     }
 
     .task {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+
+    .task p {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .task img {
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .principal {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .input-container {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    }
+
+    .input-task {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .principal {
+        width: 70%;
+        margin: 50px auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .principal {
+        max-width: 500px;
+        margin: 100px auto 0;
     }
 }
