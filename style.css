@@ -28,13 +28,14 @@ body {
 
 
 h1 {
-    color: #003329;
-    text-align: center;
+    color: #ffffff;
+    text-align: -webkit-center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 24px;
-    padding: 10px 0;
-    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 0;
+    background-color:rgba(30, 30, 235, 0.555);
+
 }
 
 .input-container {
@@ -44,6 +45,7 @@ h1 {
 }
 
 .input-task {
+    color: #003329;
     border: none;
     border-radius: 5px;
     flex-grow: 1;
@@ -51,6 +53,7 @@ h1 {
     height: 40px;
     padding-left: 10px;
     background-color: #ffffff;
+    font-size: 15px;
 }
 
 button {
@@ -78,6 +81,8 @@ button:active {
     width: 100%;
     list-style: none;
     margin-top: 30px;
+    font-size: 15px;
+    color: #003329
 }
 
 .task {
@@ -112,14 +117,16 @@ button:active {
 }
 
 .done {
+    text-transform: uppercase;
     text-decoration: line-through;
+    font-weight: bold;
     background-color: rgba(30, 30, 235, 0.555);
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
