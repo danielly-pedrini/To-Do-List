@@ -90,3 +90,20 @@ text-decoration: line-through;
 background-color:rgba(30, 30, 235, 0.555);
 opacity: 0.8;
 }
+
+@media (max-width: 600px) {
+    .principal {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .input-task, button {
+        font-size: 16px;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
