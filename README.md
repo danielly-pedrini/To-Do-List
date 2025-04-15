@@ -1,4 +1,4 @@
-<h1> Alternador de Cores </h1>
+<h1> To-Do List </h1>
 
 <h2> 📋 Descrição </h2>
 
